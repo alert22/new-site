@@ -29,7 +29,7 @@ const About = () => {
 
                         <div className="space-y-4 text-gray-600 leading-relaxed">
                             <p>
-                                Benvenuti nel mio mondo colorato! Sono <br>Olga</br>, un'artista appassionata di fiori giganti.
+                                Benvenuti nel mio mondo colorato! Sono Olga, un'artista appassionata di fiori giganti.
                                 Da anni mi dedico alla creazione di decorazioni floreali uniche, realizzate interamente a mano
                                 utilizzando materiali come la gomma EVA, la carta crespa e l'organza.
                             </p>

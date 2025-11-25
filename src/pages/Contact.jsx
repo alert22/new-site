@@ -47,7 +47,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900">Dove Siamo</h3>
-                                    <p className="text-gray-600">Spediamo le nostre creazioni in tutta Italia.</p>
+                                    <p className="text-gray-600">Avellino, Italia</p>
+                                    <p className="text-gray-600 mt-1">Spediamo le nostre creazioni in tutta Italia e UE.</p>
                                 </div>
                             </div>
                         </div>

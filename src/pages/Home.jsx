@@ -6,6 +6,8 @@ import CourseCard from '../components/CourseCard';
 import { courses } from '../data/courses';
 
 import heroImage from '../assets/hero_flowers.jpg';
+import welcomeLeft from '../assets/welcome_left.jpg';
+import welcomeRight from '../assets/welcome_right.jpg';
 
 const Home = () => {
     const featuredCourses = courses.slice(0, 3);
@@ -73,22 +75,61 @@ const Home = () => {
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-primary-50 rounded-3xl p-8 md:p-12 shadow-sm border border-primary-100">
-                        <div className="text-center max-w-3xl mx-auto">
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
-                                Benvenuti da Olghet Flowers
-                            </h2>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                Il vostro punto di riferimento per <strong>fiori giganti in Italia</strong>. Creiamo splendide e uniche composizioni floreali di dimensioni straordinarie, perfette per eventi, vetrine e spazi speciali.
-                            </p>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                Realizzati a mano con materiali di alta qualità come <strong>carta crespa, organza e gomma eva (fommy)</strong>, i nostri fiori combinano estetica e durata. Le creazioni in gomma eva sono ideali anche per esterni, resistenti agli agenti atmosferici.
-                                <br /><br />
-                                Che sia un tulipano gigante o una rosa imponente, trasformiamo la vostra visione in una decorazione unica. Spediamo in tutta Italia!
-                            </p>
-                            <Link to="/contatti" className="inline-flex items-center btn-primary">
-                                Richiedi un Preventivo Gratuito
-                                <ArrowRight className="ml-2 h-5 w-5" />
-                            </Link>
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            {/* Left Image */}
+                            <motion.div
+                                className="hidden lg:block lg:col-span-3"
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="relative">
+                                    <img
+                                        src={welcomeLeft}
+                                        alt="Fiori giganti in vetrina"
+                                        className="rounded-2xl shadow-lg w-full h-auto object-cover transform -rotate-3 hover:rotate-0 transition-transform duration-300"
+                                    />
+                                    <p className="text-xs text-gray-500 mt-2 text-center italic">Allestimento evento privato per FENDI</p>
+                                </div>
+                            </motion.div>
+
+                            {/* Center Content */}
+                            <div className="lg:col-span-6 text-center">
+                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
+                                    Benvenuti da Olghet Flowers
+                                </h2>
+                                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                                    Il vostro punto di riferimento per <strong>fiori giganti in Italia</strong>. Creiamo splendide e uniche composizioni floreali di dimensioni straordinarie, perfette per eventi, vetrine e spazi speciali.
+                                </p>
+                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                    Realizzati a mano con materiali di alta qualità come <strong>carta crespa, organza e gomma eva (fommy)</strong>, i nostri fiori combinano estetica e durata. Le creazioni in gomma eva sono ideali anche per esterni, resistenti agli agenti atmosferici.
+                                    <br /><br />
+                                    Che sia un tulipano gigante o una rosa imponente, trasformiamo la vostra visione in una decorazione unica. Spediamo in tutta Italia!
+                                </p>
+                                <Link to="/contatti" className="inline-flex items-center btn-primary">
+                                    Richiedi un Preventivo Gratuito
+                                    <ArrowRight className="ml-2 h-5 w-5" />
+                                </Link>
+                            </div>
+
+                            {/* Right Image */}
+                            <motion.div
+                                className="hidden lg:block lg:col-span-3"
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="relative">
+                                    <img
+                                        src={welcomeRight}
+                                        alt="Composizione floreale gigante"
+                                        className="rounded-2xl shadow-lg w-full h-auto object-cover transform rotate-3 hover:rotate-0 transition-transform duration-300"
+                                    />
+                                    <p className="text-xs text-gray-500 mt-2 text-center italic">Vetrina Yamamay di Milano</p>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
@@ -126,8 +167,8 @@ const Home = () => {
                         <div>
                             <h2 className="text-4xl font-serif font-bold mb-6">Perché Scegliere i Nostri Corsi?</h2>
                             <div className="space-y-8">
-                                <div className="flex items-start space-x-4">
-                                    <div className="bg-white/10 p-3 rounded-lg">
+                                <div className="flex items-center space-x-4">
+                                    <div className="bg-white/10 p-3 rounded-lg flex-shrink-0">
                                         <PlayCircle className="h-6 w-6 text-primary-200" />
                                     </div>
                                     <div>
@@ -135,8 +176,8 @@ const Home = () => {
                                         <p className="text-primary-100">Spiegazioni passo dopo passo, chiare e semplici da seguire, adatte anche ai principianti.</p>
                                     </div>
                                 </div>
-                                <div className="flex items-start space-x-4">
-                                    <div className="bg-white/10 p-3 rounded-lg">
+                                <div className="flex items-center space-x-4">
+                                    <div className="bg-white/10 p-3 rounded-lg flex-shrink-0">
                                         <Star className="h-6 w-6 text-primary-200" />
                                     </div>
                                     <div>
@@ -147,10 +188,19 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="relative">
-                            <div className="aspect-video bg-white/10 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/20 flex items-center justify-center group cursor-pointer">
-                                <PlayCircle className="h-20 w-20 text-white opacity-80 group-hover:opacity-100 transition-opacity transform group-hover:scale-110 duration-300" />
+                            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/ad6s8Ezl5GI"
+                                    title="Video Corso Gratuito"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="w-full h-full"
+                                ></iframe>
                             </div>
-                            <p className="text-center mt-4 text-primary-200 text-sm">Guarda l'anteprima dei corsi</p>
+                            <p className="text-center mt-4 text-primary-200 text-sm">Sul nostro canale YouTube troverete anche dei video corsi gratuiti</p>
                         </div>
                     </div>
                 </div>
