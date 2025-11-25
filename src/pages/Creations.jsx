@@ -2,6 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, ExternalLink, Sparkles } from 'lucide-react';
 
+import creation1 from '../assets/creation_1.jpg';
+import creation2 from '../assets/creation_2.jpg';
+import creation3 from '../assets/creation_3.jpg';
+
 const Creations = () => {
     return (
         <div className="pt-24 pb-16 min-h-screen bg-gradient-to-b from-white to-primary-50">
@@ -30,7 +34,7 @@ const Creations = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="relative"
                 >
-                    <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-3xl p-12 md:p-16 shadow-2xl overflow-hidden relative">
+                    <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden relative">
                         {/* Decorative elements */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
                         <div className="absolute bottom-0 left-0 w-48 h-48 bg-gold-300/20 rounded-full blur-3xl"></div>
@@ -77,6 +81,53 @@ const Creations = () => {
                         </div>
                     </div>
                 </motion.div>
+
+                {/* Gallery Section */}
+                <div className="mt-20 mb-16">
+                    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="relative group"
+                        >
+                            <img
+                                src={creation1}
+                                alt="Allestimento evento FENDI"
+                                className="rounded-2xl shadow-xl w-full h-auto object-cover transform -rotate-2 group-hover:rotate-0 transition-transform duration-300"
+                            />
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="relative group"
+                        >
+                            <img
+                                src={creation2}
+                                alt="Fiori giganti all'aperto"
+                                className="rounded-2xl shadow-xl w-full h-auto object-cover transform rotate-1 group-hover:rotate-0 transition-transform duration-300"
+                            />
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="relative group"
+                        >
+                            <img
+                                src={creation3}
+                                alt="Olga con composizione floreale"
+                                className="rounded-2xl shadow-xl w-full h-auto object-cover transform -rotate-1 group-hover:rotate-0 transition-transform duration-300"
+                            />
+                        </motion.div>
+                    </div>
+                </div>
 
                 {/* Features Section */}
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">

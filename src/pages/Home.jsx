@@ -76,7 +76,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-primary-50 rounded-3xl p-8 md:p-12 shadow-sm border border-primary-100">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                            {/* Left Image */}
+                            {/* Left Image - Desktop only */}
                             <motion.div
                                 className="hidden lg:block lg:col-span-3"
                                 initial={{ opacity: 0, x: -30 }}
@@ -107,13 +107,34 @@ const Home = () => {
                                     <br /><br />
                                     Che sia un tulipano gigante o una rosa imponente, trasformiamo la vostra visione in una decorazione unica. Spediamo in tutta Italia!
                                 </p>
+
+                                {/* Mobile Images Gallery */}
+                                <div className="lg:hidden mb-8 flex gap-4 overflow-x-auto pb-4 -mx-4 px-4">
+                                    <div className="flex-shrink-0 w-64">
+                                        <img
+                                            src={welcomeLeft}
+                                            alt="Allestimento evento FENDI"
+                                            className="rounded-2xl shadow-lg w-full h-auto object-cover transform -rotate-2"
+                                        />
+                                        <p className="text-xs text-gray-500 mt-2 text-center italic">Allestimento evento privato per FENDI</p>
+                                    </div>
+                                    <div className="flex-shrink-0 w-64">
+                                        <img
+                                            src={welcomeRight}
+                                            alt="Vetrina Yamamay Milano"
+                                            className="rounded-2xl shadow-lg w-full h-auto object-cover transform rotate-2"
+                                        />
+                                        <p className="text-xs text-gray-500 mt-2 text-center italic">Vetrina Yamamay di Milano</p>
+                                    </div>
+                                </div>
+
                                 <Link to="/contatti" className="inline-flex items-center btn-primary">
                                     Richiedi un Preventivo Gratuito
                                     <ArrowRight className="ml-2 h-5 w-5" />
                                 </Link>
                             </div>
 
-                            {/* Right Image */}
+                            {/* Right Image - Desktop only */}
                             <motion.div
                                 className="hidden lg:block lg:col-span-3"
                                 initial={{ opacity: 0, x: 30 }}

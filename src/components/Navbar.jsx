@@ -30,7 +30,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <Link to="/" className="flex items-center space-x-3 group">
                         <Flower2 className="h-10 w-10 text-primary-600 group-hover:text-primary-700 transition-colors" />
-                        <span className={`text-3xl font-serif font-bold ${scrolled ? 'text-gray-900' : 'text-gray-900'}`}>
+                        <span className={`text-3xl font-bold ${scrolled ? 'text-gray-900' : 'text-gray-900'}`} style={{ fontFamily: "'Dancing Script', cursive" }}>
                             Olghet Flowers
                         </span>
                     </Link>
@@ -82,10 +82,10 @@ const Navbar = () => {
                                     to={link.path}
                                     onClick={() => setIsOpen(false)}
                                     className={`block px-4 py-3 rounded-xl text-lg font-medium transition-colors ${link.name === 'Corsi'
-                                            ? 'bg-primary-600 text-white text-center mt-4'
-                                            : location.pathname === link.path
-                                                ? 'bg-primary-50 text-primary-600'
-                                                : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
+                                        ? 'bg-primary-600 text-white text-center mt-4'
+                                        : location.pathname === link.path
+                                            ? 'bg-primary-50 text-primary-600'
+                                            : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
                                         }`}
                                 >
                                     {link.name}

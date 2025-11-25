@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="col-span-1 md:col-span-1">
                         <Link to="/" className="flex items-center space-x-2 mb-4">
                             <Flower2 className="h-8 w-8 text-primary-600" />
-                            <span className="text-2xl font-serif font-bold text-gray-900">Olghet Flowers</span>
+                            <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: "'Dancing Script', cursive" }}>Olghet Flowers</span>
                         </Link>
                         <p className="text-gray-600 text-sm leading-relaxed">
                             Creiamo fiori giganti unici e insegniamo l'arte di realizzarli. Trasforma i tuoi eventi e spazi con la magia dei fiori handmade.
